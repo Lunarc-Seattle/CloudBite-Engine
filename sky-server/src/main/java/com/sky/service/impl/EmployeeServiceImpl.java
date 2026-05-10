@@ -1,6 +1,7 @@
 package com.sky.service.impl;
 
 import com.sky.constant.MessageConstant;
+import com.sky.constant.PasswordConstant;
 import com.sky.constant.StatusConstant;
 import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
@@ -14,6 +15,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -67,7 +71,23 @@ public class EmployeeServiceImpl implements EmployeeService {
         //                          源头    --     拷贝对象
         BeanUtils.copyProperties(employeeDTO,employee);
         // employee 里的属性比employeeDTO还有更多。所以需要设置
-        
+
+        employee.setStatus(StatusConstant.ENABLE);
+        //设置账号的状态，默认正常状态 1表示正常 0为锁定
+
+        employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));
+        //设置密码，默认123456
+
+        //设置当前记录的创建时间和修改时间
+        employee.setCreateTime(LocalDateTime.now());
+        employee.setUpdateTime(LocalDateTime.now());
+
+        //设置当前记录创建人的id
+        //TODO 后期改为当前登录用户的id 因为现在不知道登陆人的id
+        employee.setCreateUser(10l);
+        employee.setUpdateUser(10l);
+
+        employeeMapper.insert(employee);
     }
 
 }
