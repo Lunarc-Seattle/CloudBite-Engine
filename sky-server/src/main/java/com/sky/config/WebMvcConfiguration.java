@@ -92,5 +92,6 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         converter.setObjectMapper(new JacksonObjectMapper());
         //将自己的消息转化器加入容器中,并设置为第一个（因为还有很多其他的排在前面，不设置会把自己的额排在后面
         converters.add(0,converter);
+        //相当于默认返回数据时候会经过一个过滤器。然后你自己创建一个过滤器，定义特殊规则，就是把时间类进行格式化。然后应用这个过滤器
     }
 }
