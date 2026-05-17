@@ -23,6 +23,8 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
     @Autowired
     private JwtProperties jwtProperties;
 
+//    log =
+
     /**
      * 校验jwt
      *
