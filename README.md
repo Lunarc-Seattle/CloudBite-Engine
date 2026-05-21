@@ -20,6 +20,14 @@
 
 ---
 
+> ### 📓 Engineering Journal
+>
+> **看完代码想看我的思考过程？** → [**`00-engineering-journal/`**](00-engineering-journal/) 是我做这个项目时的**中英双语技术笔记**，包含分层架构、AOP、JWT 拦截器、反射机制、Spring 注解等 **18 篇深度分析**。每篇笔记不只是抄写课程，而是记录我**自己思考、challenge 老师结论、求证、踩坑**的完整过程。
+>
+> **Want to see how I think through engineering decisions?** → [**`00-engineering-journal/`**](00-engineering-journal/) contains **18 bilingual deep-dive notes** on layered architecture, AOP, JWT interceptors, reflection, Spring annotations, and more. Each note documents my **own reasoning, the questions I challenged, the verifications I ran, and the pitfalls I hit** — not just course transcripts.
+
+---
+
 ## ✨ Overview
 
 **CloudBite Engine** is a full-stack food delivery and restaurant operations platform designed for both restaurant administrators and end users.
