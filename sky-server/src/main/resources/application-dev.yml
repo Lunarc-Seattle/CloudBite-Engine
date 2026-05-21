@@ -6,3 +6,10 @@ sky:
     database: sky_take_out
     username: root
     password: 970324
+  alioss:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+    access-key-id: LTAI5tXxxxxxxxxx
+    #encoded use mine later
+    access-key-secret: m9vWxxxxxxxxxxxxxxxxxx
+    becket-name: sky-itcast
+

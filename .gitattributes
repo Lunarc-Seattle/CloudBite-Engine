@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# 忽略前端/配置文件/SQL等
+*.sql linguist-vendored
+*.json linguist-vendored
+nginx-1.20.2/** linguist-vendored
