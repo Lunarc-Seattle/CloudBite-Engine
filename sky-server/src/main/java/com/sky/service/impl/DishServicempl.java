@@ -64,4 +64,12 @@ public class DishServicempl implements DishService {
         Page<DishVO> page = dishMapper.pageQuery(dishPageQueryDTO);
         return new PageResult(page.getTotal(), page.getResult());
     }
+    /**
+     * 菜品批量删除
+     * @param ids
+     */
+    @Override
+    public void deleteBatch(List<Long> ids) {
+        // TODO: 实现批量删除逻辑
+    }
 }
