@@ -74,7 +74,7 @@ public class DishServicempl implements DishService {
      * 菜品批量删除
      * @param ids
      */
-    @Override
+    @Transactional
     public void deleteBatch(List<Long> ids) {
         // 先判断菜品能不能删除 --  是否存在起售的菜品？？
 
@@ -96,11 +96,57 @@ public class DishServicempl implements DishService {
             dishMapper.deleteById();
             //删除菜品表中的菜品数据
             //也不管是不是有关联（还是其他）直接根据 id去删
-            dishFlavorMapper.deleteByDish(id);
+            dishFlavorMapper.deleteByDishId(id);
         }
+    }
 
+    /**
+     * 根据id查询菜品和口味数据
+     * @param id
+     * @return
+     */
 
+    @Override
+    public DishVO getByIdWithFlavor(Long id) {
+        //两张表  最后结果都封装进 DishVO
 
+        //1。根据id 查询菜品数据
+        Dish dish = dishMapper.getById(id);
 
+        // 2 。根据菜品id查询口味数据
+        List <DishFlavor> dishFlavors = dishFlavorMapper.getByDishId(id);
+
+        //结果都封装进 DishVO
+        DishVO dishVO = new DishVO();
+        BeanUtils.copyProperties(dish,dishVO);
+        dishVO.setFlavors(dishFlavors);
+        return dishVO;
+    }
+
+    /**
+     * 根据id修改菜品基本信息和口味信息
+     * @param dishDTO
+     */
+    public void updateWithFlavor(DishDTO dishDTO) {
+     // 先全部删除，再吧list里的全部插入
+
+     //1 修改菜品的基本信息
+    Dish dish = new Dish();
+    BeanUtils.copyProperties(dishDTO,dish);
+    dishMapper.update(dish);
+
+     // 2 删除原有的口味数据
+    dishFlavorMapper.deleteByDishId(dishDTO.getId());
+
+     // 3 重新插入口味数据
+    List<DishFlavor> flavors = dishDTO.getFlavors();
+    if(flavors != null && flavors.size() >0){
+        flavors.forEach(dishFlavor -> {
+            dishFlavor.setDishId(dishDTO.getId());
+        });
+        //遍历并且把上面获得的dishid 赋值
+        //向口味表插入n条数据
+        dishFlavorMapper.insertBatch(flavors);
+        }
     }
 }
