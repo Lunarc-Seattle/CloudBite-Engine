@@ -4,7 +4,7 @@
 
 ---
 
-## 1. 核心区别一览 — *Core Differences at a Glance*
+## 1. 核心区别一览 — *  Core Differences at a Glance*
 
 | 维度 / Aspect | MySQL | Redis |
 | --- | --- | --- |
