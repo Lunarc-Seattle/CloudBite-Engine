@@ -16,11 +16,11 @@ left outer join category c on d.category_id = c.id
 
 *`d.*` selects every column from the dish table; `c.name as categoryName` **additionally** retrieves the category name aliased as `categoryName` — this is exactly the extra field `DishVO` has on top of the `Dish` entity.*
 
-![img_40.png](img_40.png)
+![img_40.png](images/img_40.png)
 
 ## 接口示意 — *Endpoint Diagram*
 
-![img_39.png](img_39.png)
+![img_39.png](images/img_39.png)
 
 ## 关键代码片段 — *Key Code Snippets*
 

@@ -1,10 +1,10 @@
-![img_15.png](img_15.png)
+![img_15.png](images/img_15.png)
 
 # 数据库结构 — *Database Schema*
-![img_16.png](img_16.png)
+![img_16.png](images/img_16.png)
 
 #为什么建议使用 DTO 来封装数据 — *Why It's Recommended to Use a DTO to Encapsulate Data*
-![img_17.png](img_17.png)
+![img_17.png](images/img_17.png)
 这是一个非常专业的开发问题。从你正在看的 [Day02-02-新增员工_代码开发](https://www.google.com/search?q=https://www.bilibili.com/video/BV1TP411v7v6%3Fp%3D17) 视频中可以看到，老师专门强调了"建议使用 DTO 来封装数据"。
 
 *This is a very professional development question. In the [Day02-02 Add Employee – Code Walkthrough](https://www.google.com/search?q=https://www.bilibili.com/video/BV1TP411v7v6%3Fp%3D17) video you're watching, the instructor specifically emphasizes "it's recommended to use a DTO to encapsulate the data".*

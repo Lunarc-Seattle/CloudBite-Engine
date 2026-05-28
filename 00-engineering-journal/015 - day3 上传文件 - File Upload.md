@@ -4,7 +4,7 @@
 >
 > *Before adding a dish, the front end first calls the file-upload endpoint to push the image to an object store (Aliyun OSS / AWS S3 / local disk); the backend returns a publicly accessible URL. That URL is later sent back with the `DishDTO` and persisted into the `dish.image` column.*
 
-![img_38.png](img_38.png)
+![img_38.png](images/img_38.png)
 
 ## 1. 接口定义 — *Endpoint Definition*
 

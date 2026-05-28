@@ -2,8 +2,8 @@
 
 ***Common-field auto-fill**, in short, means letting the program automatically populate **the audit fields that exist on every database table and that must be repeatedly assigned on each insert or update**, so that developers no longer have to manually write the `set` calls one by one.*
 
-![img_30.png](img_30.png)
-![img_32.png](img_32.png)
+![img_30.png](images/img_30.png)
+![img_32.png](images/img_32.png)
 ---
 
 ### 1. 什么是“公共字段”？ — *What Are "Common Fields"?*

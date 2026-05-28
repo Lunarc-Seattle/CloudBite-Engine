@@ -1,13 +1,13 @@
 
-2 ![img_18.png](img_18.png)
+2 ![img_18.png](images/img_18.png)
 
 
-![img_20.png](img_20.png)
+![img_20.png](images/img_20.png)
 
 ## 逻辑 — *The Logic*
-![img_21.png](img_21.png)
+![img_21.png](images/img_21.png)
 
-![img_24.png](img_24.png)
+![img_24.png](images/img_24.png)
 ### 解析出登录员工的id后，如何传递给service的save方法？ — *Once We've Parsed the Logged-in Employee's ID, How Do We Pass It to the Service's `save()` Method?*
 
 ### ThreadLocal** 是解决“谁在操作数据库”这个问题的核心武器 — ***ThreadLocal** Is the Core Weapon for Answering "Who Is Operating the Database?"*

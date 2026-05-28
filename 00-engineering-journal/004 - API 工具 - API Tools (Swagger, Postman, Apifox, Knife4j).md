@@ -56,7 +56,7 @@ http://localhost:8080/swagger-ui/index.html
 ```
 ---
 ### swagger的注释： — *Swagger Annotations:*
-![img_13.png](img_13.png)
+![img_13.png](images/img_13.png)
 
 
 ## 3. Postman 是什么？ — *What Is Postman?*

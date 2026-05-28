@@ -4,7 +4,7 @@
 >
 > *Screenshot-based quick reference for the "Add Dish" feature. For the detailed text version, see `017 - day3 Add Dish Requirements & Design`.*
 
-![img_33.png](img_33.png)
+![img_33.png](images/img_33.png)
 
 ## 业务规则 — *Business Rules*
 
@@ -22,16 +22,16 @@
 
 ## 接口 1 — *Endpoint 1*
 
-![img_34.png](img_34.png)
+![img_34.png](images/img_34.png)
 
 ## 接口 2 — *Endpoint 2*
 
-![img_35.png](img_35.png)
+![img_35.png](images/img_35.png)
 
 ## 接口 3 — *Endpoint 3*
 
-![img_36.png](img_36.png)
+![img_36.png](images/img_36.png)
 
 ## 数据库设计 — *Database Design*
 
-![img_37.png](img_37.png)
+![img_37.png](images/img_37.png)

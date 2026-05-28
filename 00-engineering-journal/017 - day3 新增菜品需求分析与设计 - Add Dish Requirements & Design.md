@@ -4,7 +4,7 @@
 >
 > *This note is the text-form summary of **Day03-05 — Add Dish: Requirements & Design**. It covers **business rules**, **API design** (request parameters and responses), and the **database design**, so you can copy and cross-check directly.*
 
-![img_41.png](img_41.png)
+![img_41.png](images/img_41.png)
 
 ---
 
@@ -124,14 +124,14 @@
 1. ***Use a unified DTO to receive data** — the Controller should declare `@RequestBody DishDTO dishDTO` to bind the incoming JSON.*
 2. ***Primary-key write-back (the most-missed point)** — after inserting into the `dish` table, you must use MyBatis's `useGeneratedKeys="true" keyProperty="id"` to **capture the newly generated dish ID**. The follow-up inserts into `dish_flavor` must bind every row to this `dish_id`!*
 
-![img_42.png](img_42.png)
+![img_42.png](images/img_42.png)
 
 # 数据库设计 — *Database Design*
 
-![img_43.png](img_43.png)
+![img_43.png](images/img_43.png)
 
 # 看一下接口 — *Inspect the Endpoint*
 
-![img_44.png](img_44.png)
+![img_44.png](images/img_44.png)
 
 ## 是按 query 来看的，各个 id 之间用逗号来间隔 — *Parameters Are Passed as a Query String; Multiple IDs Are Separated by Commas*

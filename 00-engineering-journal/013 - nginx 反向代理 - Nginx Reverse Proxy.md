@@ -1,4 +1,4 @@
-![img_9.png](img_9.png)
+![img_9.png](images/img_9.png)
 在《苍穹外卖》这个项目里，Nginx（简称 NG）就像是餐厅里的“超级领班”。如果没有它，后端的 Spring Boot（大厨）可能会直接被食客（前端请求）淹没。
 
 *In the "Sky Takeaway" project, Nginx (NG for short) acts like a "super maître d'" of the restaurant. Without it, the backend Spring Boot (the head chef) would be drowned by the diners (incoming front-end requests).*
@@ -25,7 +25,7 @@
 * ***Concrete benefit:** Nginx stands at the door and translates the front end's `http://localhost/api/login` into something the back end understands — `http://localhost:8080/admin/login`.*
 * ***Core value:** **solves CORS**, letting the front end and back end live in different "rooms" (ports) yet still communicate smoothly.*
 
-### 2. 它是“排队调度员”--可以分发好几个服务器server（负载均衡）![img_11.png](img_11.png) — *2. It's the "Queue Dispatcher" — Distributes Load Across Multiple Servers (Load Balancing)![img_11.png](img_11.png)*
+### 2. 它是“排队调度员”--可以分发好几个服务器server（负载均衡）![img_11.png](images/img_11.png) — *2. It's the "Queue Dispatcher" — Distributes Load Across Multiple Servers (Load Balancing)![img_11.png](images/img_11.png)*
 
 **场景：** 餐厅生意太火爆，一个大厨（服务器）炒菜冒烟了都忙不过来。
 
@@ -34,14 +34,14 @@
 * **形象理解**：你开了三家分店（后端集群：服务器A、B、C）。Nginx 站在街口看哪家店人少，就带客人去哪家。
 * **具体好处**：他在 [nginx.conf](https://www.google.com/search?q=https://www.bilibili.com/video/BV1TP411v7v6%3Fp%3D10) 里配置 `upstream`。当几千个请求涌入时，他平均分配，不让任何一个大厨累趴下。
 * **核心价值**：**高并发处理**，让系统像丝般顺滑，不会因为人多就挂掉。
-* **负载均衡策略**：<BR>![img_12.png](img_12.png)
+* **负载均衡策略**：<BR>![img_12.png](images/img_12.png)
 
 ***Key points:***
 
 * ***Picture it this way:** you've opened three branches (a backend cluster: servers A, B, C). Nginx stands at the corner, looks at which branch has the fewest customers, and ushers people there.*
 * ***Concrete benefit:** it configures `upstream` blocks in [nginx.conf](https://www.google.com/search?q=https://www.bilibili.com/video/BV1TP411v7v6%3Fp%3D10). When thousands of requests pour in, it spreads them evenly so no single chef collapses.*
 * ***Core value:** **handles high concurrency** — the system stays silky smooth and doesn't fall over under load.*
-* ***Load-balancing strategies:** <BR>![img_12.png](img_12.png)*
+* ***Load-balancing strategies:** <BR>![img_12.png](images/img_12.png)*
 
 ### 3. 它是“硬核保镖”（安全隔离） — *3. It's the "Hardcore Bodyguard" (Security Isolation)*
 
@@ -121,7 +121,7 @@
 * ***Full payload forwarding:** beyond rewriting the URL, Nginx packages the "soul" of the HTTP request — the **Method** (POST), **Body** (username/password), and **Headers** (JWT token) — and forwards it intact to the back end on port 8080.*
 * ***End result:** the browser sends `http://localhost/api/employee/login` $\rightarrow$ which becomes `http://localhost:8080/admin/employee/login` on the back end.*
 
-![img_10.png](img_10.png)
+![img_10.png](images/img_10.png)
 ---
 
 ### 2. 如何配置 `nginx.conf`？ — *2. How to Configure `nginx.conf`*

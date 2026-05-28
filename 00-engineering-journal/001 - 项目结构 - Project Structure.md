@@ -1,6 +1,6 @@
-![img_7.png](img_7.png)
-![img.png](img.png)
-![img_2.png](img_2.png)
+![img_7.png](images/img_7.png)
+![img.png](images/img.png)
+![img_2.png](images/img_2.png)
 
 ### 1. 实体类 (Entity Class) — *Entity Class*
 **一句话总结：它是数据库表在 Java 里的“替身”。**
@@ -129,7 +129,7 @@ public class Employee {
 ---
 
 ### 1. Entity (实体类) --pojo/.../... — *Entity Class — `pojo/.../...`*
-![img_5.png](img_5.png)
+![img_5.png](images/img_5.png)
 * **存放位置：** `com.sky.entity`
 * **职责：** **与数据库表“一一对应”**。
 * **特点：**
@@ -240,7 +240,7 @@ JS 类比： 就像你写的一个 utils.js 模块，里面封装了日期格式
 * ***JS analogy:** like a `utils.js` file you've written that exports `formatDate()`, `validateEmail()`, and so on.*
 * ***Where it lives in the project:** the `sky-common` module shown in the video.*
 
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)
 在 `sky-common` 模块（也就是你提到的 `common` 文件夹）中，存放的是**整个项目都要用到的“通用工具”和“标准规范”**。
 
 *The `sky-common` module (the `common` folder you mentioned) holds the **"general-purpose tools" and "standard specifications" used across the entire project**.*
