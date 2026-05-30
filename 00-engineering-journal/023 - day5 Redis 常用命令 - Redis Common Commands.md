@@ -127,19 +127,19 @@ INCRBY balance:1001 -50           # 扣 50 块余额
 
 ## 2. List 类型命令 — *List-Type Commands*
 
-| 命令 / Command | 作用 / Purpose | 例子 / Example |
-| --- | --- | --- |
-| `LPUSH key v1 v2 ...` | 从左边塞 / *push from the left* | `LPUSH queue "task1"` |
-| `RPUSH key v1 v2 ...` | 从右边塞 / *push from the right* | `RPUSH queue "task2"` |
-| `LPOP key` | 从左边弹出 / *pop from the left* | `LPOP queue` → `"task1"` |
-| `RPOP key` | 从右边弹出 / *pop from the right* | `RPOP queue` |
+| 命令 / Command | 作用 / Purpose                                                | 例子 / Example |
+| --- |-------------------------------------------------------------| --- |
+| `LPUSH key v1 v2 ...` | 从左边塞 / *push from the left*                                 | `LPUSH queue "task1"` |
+| `RPUSH key v1 v2 ...` | 从右边塞 / *push from the right*                                | `RPUSH queue "task2"` |
+| `LPOP key` | 从左边弹出 / *pop from the left*                                 | `LPOP queue` → `"task1"` |
+| `RPOP key` | 从右边弹出 / *pop from the right*                                | `RPOP queue` |
 | `BLPOP key timeout` | 阻塞式左弹（**消费者用**）/ *blocking left pop (**consumer pattern**)* | `BLPOP order_queue 30` |
-| `BRPOP key timeout` | 阻塞式右弹 / *blocking right pop* | — |
-| `LRANGE key start stop` | 按索引区间查（`-1` 表示末尾）/ *fetch by index range (`-1` = last)* | `LRANGE queue 0 -1`（全部）|
-| `LLEN key` | 列表长度 / *list length* | `LLEN queue` → `42` |
-| `LINDEX key i` | 按索引取单个 / *get by index* | `LINDEX queue 0` |
-| `LREM key count value` | 删除指定值（按 count 控制数量和方向）/ *remove by value* | `LREM queue 1 "task1"` |
-| `LTRIM key start stop` | 截断只保留区间内 / *trim to a range* | `LTRIM recent 0 99`（只留前 100）|
+| `BRPOP key timeout` | 阻塞式右弹 / *blocking right pop*                                | — |
+| `LRANGE key start stop` | 按索引区间查（`-1` 表示末尾）/ *fetch by index range (`-1` = last)*     | `LRANGE queue 0 -1`（全部）|
+| `LLEN key` | 列表长度 / *list length*                                        | `LLEN queue` → `42` |
+| `LINDEX key i` | 按索引取单个 / *get by index*                                     | `LINDEX queue 0` |
+| `LREM key count value` | 删除指定值（按 count 控制数量和方向）/ *remove by value*                   | `LREM queue 1 "task1"` |
+| `LTRIM key start stop` | 截断只保留区间内 / *trim to a range*                                | `LTRIM recent 0 99`（只留前 100）|
 
 ### 经典组合 —— 消息队列模式 — *Classic Combo: Message Queue*
 
