@@ -12,4 +12,8 @@ sky:
     #encoded use mine later
     access-key-secret: m9vWxxxxxxxxxxxxxxxxxx
     becket-name: sky-itcast
+  redis:
+    host: localhost
+    port: 6379
+    database: 10
 
